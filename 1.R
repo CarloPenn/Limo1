@@ -47,3 +47,4 @@ streu_laufen__zentrieren <- ggplot(data = Laufen_zentrieren, aes(x = pace, y = H
 streu_laufen__zentrieren
 cor(Laufen_zentrieren$pace, Laufen_zentrieren$HR)
 # 0.561747
+gsg
