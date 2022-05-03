@@ -28,7 +28,7 @@ streu_laufen_geschwindigkeit
 Laufen_meilen <- Laufen_geschwindigkeit
 Laufen_meilen$pace <- Laufen_geschwindigkeit$pace/1.61
 Laufen_meilen$HR <- Laufen_geschwindigkeit$HR/60
-View(Laufen_meilen)
+#View(Laufen_meilen)
 reg_laufen_meilen <- lm(HR ~ pace, data = Laufen_meilen)
 summary(reg_laufen_meilen)
 streu_laufen__meilen <- ggplot(data = Laufen_meilen, aes(x = pace, y = HR)) +
