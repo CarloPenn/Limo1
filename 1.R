@@ -1,6 +1,7 @@
-install.packages("ggplot2")
+#install.packages("ggplot2")
 library(ggplot2)
-Laufen <- readRDS("C:/Users/carlo/Downloads/201 RCode (2).Rds")
+Laufen <- readRDS("RunningAgg.Rds")
+
 
 
 Laufen
@@ -15,7 +16,7 @@ streu_laufen
 # AUfgabe 1b Geschwindigkeit HR
 Laufen_geschwindigkeit <- Laufen
 Laufen_geschwindigkeit$pace <- 60 / Laufen_geschwindigkeit$pace
-View(Laufen_geschwindigkeit)
+#View(Laufen_geschwindigkeit)
 reg_laufen_geschwindigkeit <- lm(HR ~ pace, data = Laufen_geschwindigkeit)
 summary(reg_laufen_geschwindigkeit)
 streu_laufen_geschwindigkeit <- ggplot(data = Laufen_geschwindigkeit, aes(x = pace, y = HR)) +
