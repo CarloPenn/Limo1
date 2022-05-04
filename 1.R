@@ -1,4 +1,4 @@
-install.packages("ggplot2")
+# install.packages("ggplot2")
 library(ggplot2)
 Laufen <- readRDS("C:/Users/carlo/Downloads/201 RCode (2).Rds")
 
