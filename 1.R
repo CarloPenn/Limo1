@@ -3,6 +3,7 @@
 library(ggplot2)
 Laufen <- readRDS("RunningAgg.Rds")
 
+class(Laufen)
 
 
 Laufen
@@ -11,10 +12,10 @@ reg_laufen <- lm(HR ~ pace, data = Laufen)
 summary(reg_laufen)
 streu_laufen <- ggplot(data = Laufen, aes(x = pace, y = HR)) +
   geom_point(color = "blue")+
-  geom_smooth(method = "lm", se = FALSE)
+  geom_smooth(method = "lm", se = TRUE)
 streu_laufen
 
-# AUfgabe 1b Geschwindigkeit HR
+# Aufgabe 1b Geschwindigkeit HR
 Laufen_geschwindigkeit <- Laufen
 Laufen_geschwindigkeit$pace <- 60 / Laufen_geschwindigkeit$pace
 #View(Laufen_geschwindigkeit)
